@@ -3,22 +3,7 @@ import numpy as np
 import pandas as pd
 import string
 
-# def clean_text(note_text: str):
-#     """
-#       This function performs basic cleaning for Stanford clinical text
-#     """
 
-#     note_text = re.sub(r"\s(\?|¿)\s", ' ', note_text)
-#     note_text = re.sub(r"\n", ' ', note_text)
-#     note_text = re.sub(r"(\?|\¿)", ' ', note_text)
-#     note_text = re.sub(u"\xa0", ' ', note_text)
-#     # remove double spaces
-#     note_text = re.sub(r"\s{2,}", ' ', note_text)
-#     return note_text
-
-
-
-#-------------------START CODE BY JOSE POSEDA--------------------------------------------------------------------------#
 def span_overlap(span1, span2):
     # check if two spans overlaps
     # -1 if the spans does not overlap
@@ -136,24 +121,6 @@ def find_sections_content(report, sections_found):
     return sections_found
 
 
-# def extract_section_contents_multiple_reports(reports_dict, reports_section_dict, sections_list=None,
-#                                               new_line=True):
-#     # this method iterates over the dictionary and remove the section titles of all teh reports
-#     # the method returns reports_dict with the value/string modified
-
-#     for report_file_name in reports_dict.keys():
-#         report = reports_dict.get(report_file_name)
-#         sections_found = reports_section_dict.get(report_file_name)
-#         reports_dict[report_file_name] = extract_section_contents_single_report(report=report,
-#                                                                                 sections_found=sections_found,
-#                                                                                 sections_list=sections_list,
-#                                                                                 new_line=new_line)
-
-#     return reports_dict
-
-# sections_found = find_all_sections_title_single_report(report, sections)
-# extracted = extract_section_contents_single_report(report, sections_found, sections_list=['Diet Comment:', 'Smoking Cessation Comment:'], new_line=True,
-#                                            delete_empty_sections=True)
 
 def extract_section_contents_single_report(report, sections_found, sections_list=None, new_line=True,
                                            delete_empty_sections=True):
@@ -205,7 +172,7 @@ def get_text_span(subtext, text):
     span = [start_span, end_span]
 
     return span
-#-------------------END-- CODE BY JOSE POSEDA--------------------------------------------------------------------------#
+
 
 def extract(x, sections, takeLastInstance = False):
     if takeLastInstance:
