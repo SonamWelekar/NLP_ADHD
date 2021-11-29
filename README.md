@@ -19,7 +19,7 @@ The repo consists of the src folder, which has two folders listed below:
   
     b. The Deployment_Val_Test_Set notebook uses the saved weights to obtain the results for validation and test set(annotated notes).
   
-    c. The Final_Deployment_notebook uses the saved weights and predicts the labels and "BT_y/n" for unannotated notes, and the predictions are saved for further analysis.
+    c. The Final_Deployment_notebook uses the saved weights and predicts the labels and "BT_y/n" for unannotated notes, and the predictions are saved for further analysis.           (BT: Behavioral Therapy)
   
  
 # Technologies used:
