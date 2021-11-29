@@ -24,7 +24,7 @@ The repo consists of the src folder, which has two folders listed below:
  
 # Technologies used:
 
-The Jupyter notebooks and python files needed are generated and executed using Jupyter Lab on the Google Cloud console.
+The Jupyter notebooks and python files needed are generated and executed using JupyterLab on the Google Cloud console and using GPU.
 
 # Machine Learning algorithm used:
 
