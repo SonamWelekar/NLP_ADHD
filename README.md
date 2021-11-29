@@ -1,6 +1,6 @@
 # NLP_ADHD
 
-#Project Summary:
+# Project Summary:
 
 This project aims to leverage NLP and ML models to improve the quality of care offered to children with developmental and behavioral disorders, including attention-deficit/hyperactivity disorder (ADHD) and autism spectrum disorder (ASD). We successfully created a pipeline and binary classification algorithm based on a BERT transformer that achieved acceptable performance in classifying clinician notes that contained recommendations for evidence-based treatments for young children with ADHD. We have also deployed the model on the unannotated deployment set, which gave us a recall of 0.92. 
 
@@ -15,9 +15,11 @@ The repo consists of the src folder, which has two folders listed below:
 
 2. notebooks:This folder contains notebooks used to obtain results for the research.
   
-  a. The Training_ClinicalBERT notebook trains the network using dataset mentioned, and the trained weights are saved for further use.
-  b. The Deployment_Val_Test_Set notebook uses the saved weights to obtain the results for validation and test set(annotated notes).
-  c. The Final_Deployment_notebook uses the saved weights and predicts the labels and "BT_y/n" for unannotated notes, and the predictions are saved for further analysis.
+    a. The Training_ClinicalBERT notebook trains the network using dataset mentioned, and the trained weights are saved for further use.
+  
+    b. The Deployment_Val_Test_Set notebook uses the saved weights to obtain the results for validation and test set(annotated notes).
+  
+    c. The Final_Deployment_notebook uses the saved weights and predicts the labels and "BT_y/n" for unannotated notes, and the predictions are saved for further analysis.
   
  
 # Technologies used:
