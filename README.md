@@ -1,12 +1,16 @@
 # NLP_ADHD
 
+# Background
+
+The National Institute for Children’s Health Quality has recognized that quality measures for child mental and behavioral health disorders, including attention-deficit/hyperactivity disorder (ADHD), are lacking and are critically needed (2). The current national quality measures used for assessment of ADHD care (Healthcare Effectiveness Data and Information Set (HEDIS)) capture the timing of follow up care for children prescribed with ADHD medications (3). These claims-based measures only address a narrow aspect of care in a subset of patients. Furthermore, they are not based on published clinical practice guidelines and received a “poor” or “not-rated” strength of evidence grade (4). Manual chart review of a sample of ADHD patients per clinician – used by many health care organizations to supplement these crude measures – is labor-intensive and expensive (5,6).
+
 # Project Summary:
 
-This project aims to leverage NLP and ML models to improve the quality of care offered to children with developmental and behavioral disorders, including attention-deficit/hyperactivity disorder (ADHD) and autism spectrum disorder (ASD). We successfully created a pipeline and binary classification algorithm based on a BERT transformer that achieved acceptable performance in classifying clinician notes that contained recommendations for evidence-based treatments for young children with ADHD. We have also deployed the model on the unannotated deployment set, which gave us a recall of 0.92. 
+This project aims to leverage natural language processing (NLP) and machine learning (ML) models to improve the measurement of quality-of-care offered to children with developmental and behavioral disorders, including ADHD. We created a pipeline and binary classification algorithm based on a BERT transformer that achieved acceptable performance in classifying clinician notes that contained recommendations for evidence-based treatments for young children with ADHD. We also deployed the model on the unannotated deployment set (n=1,020 notes), which gave us a recall of 0.92. 
 
 # Dataset:
 
-The dataset used consists of electronic health records (EHR) provided by Primary care providers (PCP) for 4-5 years of preschool-aged children.
+The dataset used consists of clinical notes (free text data) from electronic health records (EHR) documented by Primary care providers (PCPs) at a communinty-based primary care network in California. Notes included are from primary care visits of children aged 4-6 years who have at least 1 visit with an ICD-10 diagnosis of ADHD after the age of 4 years.
 
 # Repository Structure:
 
@@ -17,7 +21,7 @@ The repo consists of the src folder, which has two folders listed below:
   
     a. The Training_ClinicalBERT notebook trains the network using dataset mentioned, and the trained weights are saved for further use.
   
-    b. The Deployment_Val_Test_Set notebook uses the saved weights to obtain the results for validation and test set(annotated notes).
+    b. The Deployment_Val_Test_Set notebook uses the saved weights to obtain the results for validation and test set (annotated notes).
   
     c. The Final_Deployment_notebook uses the saved weights and predicts the labels and "BT_y/n" for unannotated notes, and the predictions are saved for further analysis.           (BT: Behavioral Therapy)
   
